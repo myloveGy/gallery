@@ -5,52 +5,52 @@ export default [
     "content": "my name is jinxing"
   },
   {
-    "url": "../images/2.jpg",
+    "url": "./images/2.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   },
   {
-    "url": "../images/3.jpg",
+    "url": "./images/3.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   },
   {
-    "url": "../images/4.jpg",
+    "url": "./images/4.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   },
   {
-    "url": "../images/5.jpg",
+    "url": "./images/5.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   },
   {
-    "url": "../images/6.jpg",
+    "url": "./images/6.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   },
   {
-    "url": "../images/7.jpg",
+    "url": "./images/7.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   },
   {
-    "url": "../images/6.jpg",
+    "url": "./images/6.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   },
   {
-    "url": "../images/7.jpg",
+    "url": "./images/7.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   },
   {
-    "url": "../images/3.jpg",
+    "url": "./images/3.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   },
   {
-    "url": "../images/4.jpg",
+    "url": "./images/4.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   }
