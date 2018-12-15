@@ -56,10 +56,6 @@ html, body {
 
 .img-sec .is-inverse {
     transform: translate(320px) rotateY(180deg);
-    -ms-transform: translate(320px) rotateY(180deg); /* IE 9 */
-    -moz-transform: translate(320px) rotateY(180deg); /* Firefox */
-    -webkit-transform: translate(320px) rotateY(180deg); /* Safari 和 Chrome */
-    -o-transform: translate(320px) rotateY(180deg); /* Opera */
 }
 
 .img-figure img {
@@ -149,10 +145,6 @@ figcaption .img-title {
 .controller-nav .is-inverse {
     background-color: #555;
     transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg); /* IE 9 */
-    -moz-transform: rotateY(180deg); /* Firefox */
-    -webkit-transform: rotateY(180deg); /* Safari 和 Chrome */
-    -o-transform: rotateY(180deg); /* Opera */
 }
 
 /* controller -- end  */
