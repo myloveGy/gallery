@@ -1,6 +1,6 @@
 export default [
   {
-    "url": "../images/1.jpg",
+    "url": "./images/1.jpg",
     "title": "my name is liujinxing",
     "content": "my name is jinxing"
   },
