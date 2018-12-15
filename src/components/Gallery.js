@@ -54,11 +54,9 @@ class Gallery extends Component {
      * @return {Function} 这是一个闭包函数，返回一个正真的
      */
     inverse(index) {
-        return () => {
-            let imagesArrangeArray = this.state.imagesArrangeArray
-            imagesArrangeArray[index].isInverse = !imagesArrangeArray[index].isInverse
-            this.setState({imagesArrangeArray})
-        }
+        let imagesArrangeArray = this.state.imagesArrangeArray
+        imagesArrangeArray[index].isInverse = !imagesArrangeArray[index].isInverse
+        this.setState({imagesArrangeArray})
     }
 
     /**
@@ -67,9 +65,22 @@ class Gallery extends Component {
      * @returns {Function}
      */
     center(index) {
-        return () => {
-            this.rearrange(index)
-        }
+        this.rearrange(index)
+    }
+
+    /**
+     * 添加事件
+     *
+     * @param index
+     */
+    handle(index) {
+       return () => {
+           if (this.state.imagesArrangeArray[index].isCenter) {
+               this.inverse(index)
+           } else {
+               this.center(index)
+           }
+       }
     }
 
     // 组件加载完成处理
@@ -198,8 +209,7 @@ class Gallery extends Component {
 
             // 图片信息
             imgFigures.push(<ImgFigure
-                inverse={this.inverse(index)}
-                center={this.center(index)}
+                handle={this.handle(index)}
                 key={index}
                 arrange={this.state.imagesArrangeArray[index]}
                 data={item}
@@ -208,7 +218,7 @@ class Gallery extends Component {
                 }}/>)
 
             // 按钮信息
-            controllerUnit.push(<ControllerUnit key={index} arrange={this.state.imagesArrangeArray[index]}/>)
+            controllerUnit.push(<ControllerUnit key={index} arrange={this.state.imagesArrangeArray[index]} handle={this.handle(index)}/>)
         });
 
         return (

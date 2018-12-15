@@ -11,12 +11,7 @@ class ImgFigure extends Component {
      * 点击事件
      */
     handleClick(e) {
-        if (this.props.arrange.isCenter) {
-            this.props.inverse && this.props.inverse()
-        } else {
-            this.props.center && this.props.center()
-        }
-
+        this.props.handle && this.props.handle()
         e.stopPropagation()
         e.preventDefault()
 

@@ -7,6 +7,7 @@ class ControllerUnit extends Component {
     }
 
     handleClick(e) {
+        this.props.handle && this.props.handle()
         e.stopPropagation()
         e.preventDefault()
     }
