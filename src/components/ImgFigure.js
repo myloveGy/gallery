@@ -40,7 +40,7 @@ class ImgFigure extends Component {
 
     return (
       <figure className={imgFigureClassName} style={styleObj} onClick={this.handleClick}>
-        <img src={require(this.props.data.url)} alt={this.props.data.title}/>
+        <img src={this.props.data.url} alt={this.props.data.title}/>
         <figcaption>
           <h2 className="img-title">{this.props.data.title}</h2>
           <div className="img-back" onClick={this.handleClick}>
