@@ -194,7 +194,8 @@ class Gallery extends Component {
         let imgFigures = [], controllerUnit = [];
         images.forEach((item, index) => {
             if (!this.state.imagesArrangeArray[index]) {
-                this.state.imagesArrangeArray[index] = {
+                let imagesArrangeArray = this.state.imagesArrangeArray;
+                imagesArrangeArray[index] = {
                     pos: {
                         left: 0,
                         top: 0,
@@ -205,6 +206,8 @@ class Gallery extends Component {
                     isInverse: false,
                     isCenter: false,
                 }
+
+                this.setState({imagesArrangeArray})
             }
 
             // 图片信息
