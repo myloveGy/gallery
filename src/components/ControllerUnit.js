@@ -25,7 +25,7 @@ class ControllerUnit extends Component {
         }
 
         return (
-            <span className={controllerClassName} onClick={this.handleClick}></span>
+            <span className={controllerClassName} onClick={this.handleClick}/>
         )
     }
 }
