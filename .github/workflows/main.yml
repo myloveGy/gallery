@@ -1,4 +1,4 @@
-name: CI
+name: GitHub Actions Build Gallery Demo
 
 on:
   push:
@@ -6,21 +6,18 @@ on:
       - master
 
 jobs:
-  build:
+  build-and-deploy:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
-    - name: Run a CI
-      run: npm ci
-    - name: Install package
-      run: npm install react
-    - name: build
-      run: npm run build
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.5.0
+    - name Checkout Master
+      uses: actions/checkout@master
+
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
       env:
-        ACTIONS_DEPLOY_KEY: ${{secrets.key}}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./dist
+       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+       BRANCH: gh-pages
+       FOLDER: build
+       BUILD_SCRIPT: npm install && npm run build
